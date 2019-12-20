@@ -34,12 +34,7 @@ const UserForm = ({ errors, touched, values, status }) => {
         <FormGroup>
           <Field type="password" name="password" placeholder="password" />
         </FormGroup>
-        <Label>
-          {touched.tos && errors.tos && <p className="error">{errors.tos}</p>}
-          <Field type="checkbox" className="box" name="tos" />
-          Agree to Terms of Service
-          <br />
-        </Label>
+        
         <br />
         <Button type="submit" className>Submit</Button>
       </Form>
@@ -79,7 +74,7 @@ const FormikUserForm = withFormik({
   }),
   handleSubmit: (values, { resetForm, setStatus }) => {
     axios
-    //   .post("https://reqres.in/api/users", values)
+      .post("https://reqres.in/api/users", values)
       .then(response => {
         console.log(response);
         setStatus(response);

@@ -14,25 +14,25 @@ const UserForm = ({ errors, touched, values, status }) => {
     }
   }, [status]);
   return (
-    <div>
+    <div className="user-form">
       <Form>
         <FormGroup>
           {touched.name && errors.name && (
             <p className="error">{errors.name}</p>
           )}
-          <Field type="text" name="name" placeholder="name" />
+          <Field id="Name" type="text" name="name" placeholder="name" />
           {touched.email && errors.email && (
             <p className="error">{errors.email}</p>
           )}
         </FormGroup>
         <FormGroup>
-          <Field type="email" name="email" placeholder="email" />
+          <Field id="Email" type="email" name="email" placeholder="email" />
           {touched.password && errors.password && (
             <p className="error">{errors.password}</p>
           )}
         </FormGroup>
         <FormGroup>
-          <Field type="password" name="password" placeholder="password" />
+          <Field id="Password" type="password" name="password" placeholder="password" />
         </FormGroup>
         
         <br />

@@ -22,4 +22,4 @@ const Navigation = () => {
     );
 };
 
-export default NavigationPreloadManager;
+export default Navigation;

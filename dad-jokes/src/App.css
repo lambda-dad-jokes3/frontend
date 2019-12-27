@@ -1,3 +1,6 @@
+body{
+  background-color: lightgrey;
+}
 .App {
   text-align: center;
   display: flex;
@@ -37,16 +40,20 @@ li {
 }
 
 input {
-  margin: 10px;
+  margin: 20px;
   font-size: larger;
   align-self: center;
 }
 .Nav-link{
   margin: 15px;
   text-decoration: none;
+  color: #3F3957;
 }
 .user-form{
-  width: 460px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 400px;
   margin: 0 auto;
   padding: 32px;
   font-weight: bold;
@@ -57,7 +64,7 @@ input {
 .error {
   margin: 0;
   position: absolute;
-  color: fushia;
+  color: black;
 }
 .App nav{
   display: flex;

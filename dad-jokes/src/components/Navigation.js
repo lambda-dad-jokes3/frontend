@@ -17,6 +17,11 @@ const Navigation = () => {
                     Sign Up
                 </Link>
             </NavItem>
+            <NavItem>
+                <Link className="Nav-link" to="/jokes">
+                    Jokes
+                </Link>
+            </NavItem>
         </Nav>
     </div>
     );

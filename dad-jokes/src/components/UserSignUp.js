@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Field, withFormik } from "formik";
 import * as yup from "yup";
 import axios from "axios";
-import { Button, FormGroup, Label } from "reactstrap";
+import { Button, FormGroup } from "reactstrap";
 import { useState, useEffect } from "react";
 import { Card, CardText, CardBody } from "reactstrap";
 

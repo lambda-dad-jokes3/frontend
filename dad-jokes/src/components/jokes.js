@@ -13,10 +13,10 @@ const JokeCard = props => {
             <Container>
                 <Row>
                     <Col sm="6">
-                        <Card body className="text-center" style={{backgroundColor: "yellow", borderColor: "#333"}}>
+                        <Card body className="text-center" style={{backgroundColor: "#585370", borderColor: "#333"}}>
                         
                             <CardTitle>Question: {props.question}</CardTitle>
-                            
+
                             <CardText>Punchline: {props.punchline}</CardText>
                        
                         </Card>

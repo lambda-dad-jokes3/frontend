@@ -1,6 +1,6 @@
 import React from "react";
 import {Card, CardTitle, CardBody, CardText, Container, Row, Col} from "reactstrap";
-import JokesData from "./JokesCardDisplay";
+
 
 const JokeCard = props => {
     console.log(props.user_id);

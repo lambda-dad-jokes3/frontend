@@ -23,7 +23,6 @@ export default function JokesData() {
             <Row>
                 {jokes.map(item => {
                     console.log(item.question);
-
                     return (
                         <div>
                             <JokesCard question={item.question} punchline={item.punchline} />

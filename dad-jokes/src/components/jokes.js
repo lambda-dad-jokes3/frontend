@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardTitle, CardBody, CardText, Container, Row, Col} from "reactstrap";
+import {Card, CardTitle, CardText, Container, Row, Col} from "reactstrap";
 
 
 const JokeCard = props => {
@@ -26,5 +26,4 @@ const JokeCard = props => {
         </div>
     );
 };
-
 export default JokeCard;

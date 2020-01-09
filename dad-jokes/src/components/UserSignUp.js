@@ -17,10 +17,10 @@ const UserForm = ({ errors, touched, values, status }) => {
     <div className="user-form">
       <Form>
         <FormGroup>
-          {touched.name && errors.name && (
-            <p className="error">{errors.name}</p>
+          {touched.username && errors.username && (
+            <p className="error">{errors.username}</p>
           )}
-          <Field id="Name" type="text" name="name" placeholder="name" />
+          <Field id="username" type="text" name="username" placeholder="username" />
           {touched.email && errors.email && (
             <p className="error">{errors.email}</p>
           )}
@@ -43,7 +43,7 @@ const UserForm = ({ errors, touched, values, status }) => {
       {users.map(users => (
         <Card key={users.id}>
           <CardBody className="userCard">
-            <CardText>Name: {users.data.name}</CardText>
+            <CardText>UserName: {users.data.username}</CardText>
             <CardText>Email: {users.data.email}</CardText>
           </CardBody>
         </Card>
@@ -52,18 +52,18 @@ const UserForm = ({ errors, touched, values, status }) => {
   );
 };
 const FormikUserForm = withFormik({
-  mapPropsToValues: ({ name, email, password }) => {
+  mapPropsToValues: ({ username, email, password }) => {
     return {
-      name: name || "",
+      username: username || "",
       email: email || "",
       password: password || "",
     };
   },
   validationSchema: yup.object().shape({
-    name: yup
+    username: yup
       .string()
-      .max(10, "Your Name is to long")
-      .required("Name is required"),
+      .max(10, "Your userame is to long")
+      .required("username is required"),
     email: yup
       .string()
       .email("Enter a valid email address")

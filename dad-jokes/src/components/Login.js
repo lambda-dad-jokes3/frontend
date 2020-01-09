@@ -18,7 +18,7 @@ const Login = props => {
   const login = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/users/login", user)
+      .post("/user/login", user)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
         props.history.push("/jokes");

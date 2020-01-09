@@ -25,20 +25,18 @@ const UserForm = ({ errors, touched, values, status }) => {
             <p className="error">{errors.email}</p>
           )}
         </FormGroup>
-        <FormGroup>
+        {/* <FormGroup>
           <Field id="Email" type="email" name="email" placeholder="email" />
           {touched.password && errors.password && (
             <p className="error">{errors.password}</p>
           )}
-        </FormGroup>
+        </FormGroup> */}
         <FormGroup>
           <Field id="Password" type="password" name="password" placeholder="password" />
         </FormGroup>
         
         <br />
         <Button type="submit" className>Submit</Button>
-{/*         
-        <Button type="link" className>Already A Member</Button> */}
       </Form>
       {users.map(users => (
         <Card key={users.id}>
@@ -55,7 +53,7 @@ const FormikUserForm = withFormik({
   mapPropsToValues: ({ username, email, password }) => {
     return {
       username: username || "",
-      email: email || "",
+    //   email: email || "",
       password: password || "",
     };
   },
@@ -64,10 +62,10 @@ const FormikUserForm = withFormik({
       .string()
       .max(10, "Your userame is to long")
       .required("username is required"),
-    email: yup
-      .string()
-      .email("Enter a valid email address")
-      .required("Valid Email is required"),
+    // email: yup
+    //   .string()
+    //   .email("Enter a valid email address")
+    //   .required("Valid Email is required"),
     password: yup
       .string()
       .min(8, "Password must be at least 8 characters")
@@ -76,7 +74,8 @@ const FormikUserForm = withFormik({
   }),
   handleSubmit: (values, { resetForm, setStatus }) => {
     axios
-      .post("https://reqres.in/api/users", values)
+      .post("https://dadjokesdb.herokuapp.com/user/register", values)
+    
       .then(response => {
         console.log(response);
         setStatus(response);

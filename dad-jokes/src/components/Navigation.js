@@ -13,11 +13,10 @@ const Navigation = () => {
                 </Link>
             </NavItem>
             <NavItem>
-                <Link className="Nav-link" to="/Login">
+                <Link className="Nav-link" to="/login">
                     Login
                 </Link>
             </NavItem>
-            <NavItem></NavItem>
             <NavItem>
                 <Link className="Nav-link" to="/signup">
                     Sign Up

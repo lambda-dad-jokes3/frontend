@@ -3,9 +3,9 @@ import {Card, CardTitle, CardText, Container, Row, Col} from "reactstrap";
 
 
 const JokeCard = props => {
-    console.log(props.user_id);
-    console.log(props.question);
-    console.log(props.punchline);
+    // console.log(props.user_id);
+    // console.log(props.question);
+    // console.log(props.punchline);
 
 
     return (

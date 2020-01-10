@@ -33,6 +33,9 @@ const UserForm = ({ errors, touched, values, status }) => {
         </FormGroup> */}
         <FormGroup>
           <Field id="Password" type="password" name="password" placeholder="password" />
+          {touched.password && errors.password && (
+            <p className="error">{errors.password}</p>
+          )}
         </FormGroup>
         
         <br />
@@ -42,7 +45,7 @@ const UserForm = ({ errors, touched, values, status }) => {
         <Card key={users.id}>
           <CardBody className="userCard">
             <CardText>UserName: {users.data.username}</CardText>
-            <CardText>Email: {users.data.email}</CardText>
+            {/* <CardText>Email: {users.data.email}</CardText> */}
           </CardBody>
         </Card>
       ))}
